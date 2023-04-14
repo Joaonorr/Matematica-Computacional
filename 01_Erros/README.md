@@ -66,7 +66,7 @@ $$
 - p é a precisão
 - m é valor mínimo que o expoente pode assumir
 - M é o valor máximo que o expoente pode assumir
-
+---
 ## Maior valor:
 O maior valor pode ser achado da seguinte forma:
 
@@ -90,10 +90,68 @@ print(maxValue(3, 3, 4)) # Fraction(78, 1)
 print(maxValue(2, 5, 10)) # Fraction(992, 1)
 print(maxValue(10, 4, 3)) # Fraction(9999, 10)
 ```
-
+---
 ## Menor valor:
 O menor valor pode se achado da seguinte forma:
 
 $$
 \frac{1}{β} * \frac{1}{β^{-m}}
 $$
+
+Também podemos escrever da seguinte forma na linguagem python:
+
+```python
+from fractions import Fraction
+
+def minValue(β, p, m):
+        return Fraction(1 , β) * Fraction(1 , (β ** -m))
+
+print(minValue(2, 3, -3)) # Fraction(1, 16)
+print(minValue(3, 3, -4)) # Fraction(1, 243)
+print(minValue(2, 5, -10)) # Fraction(1, 2048)
+print(minValue(10, 4, -3)) # Fraction(1, 10000)
+```
+---
+## Solução para avaliação automática:
+```python
+from fractions import Fraction
+
+class SystemFloat:
+    def __init__(self, base:int, precision:int, min:int, max:int):
+        self.base = base
+        self.precision = precision
+        self.min = min
+        self.max = max
+
+    def maxValue(self):
+        sum = 0
+        for i in range(self.precision):
+            sum += Fraction(self.base - 1, self.base ** (i+1))
+        return Fraction((self.base ** self.max) * (sum))
+          
+    def minValue(self):
+        return Fraction(1 , self.base) * Fraction(1 , (self.base** -self.min))
+
+
+def main():
+    f = input()
+    f = f.split(" ")
+    base = int(f[0])
+    precision = int(f[1])
+    min = int(f[2])
+    max = int(f[3])
+
+    sf = SystemFloat(base, precision, min, max)
+
+    maxValue = sf.maxValue()
+    minValue = sf.minValue()
+
+    print(maxValue) if '/' in str(maxValue) else print(str(maxValue) + "/1")
+    print(minValue) if '/' in str(minValue) else print(str(minValue) + "/1")
+
+
+
+
+if __name__ == "__main__":
+    main()
+```
