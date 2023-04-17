@@ -26,9 +26,8 @@ Note que o erro absoluto dessa representação é:
 
 $$
 \begin{align*}
-    \frac{1}{10} − \frac{25}{256} &=&
-             \frac{6}{2560}\\ \\&=&
-                         \frac{3}{1280}
+    \frac{1}{10} − \frac{25}{256} &= \frac{6}{2560}\\\\
+    &= \frac{3}{1280}
 \end{align*}
 $$
 
