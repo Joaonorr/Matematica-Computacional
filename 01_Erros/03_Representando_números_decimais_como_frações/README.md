@@ -5,35 +5,31 @@ $$0.11 × 2 ^{− 1}$$
 <br>ou seja, 
 
 $$
-\begin{matrix}
-(\frac{1}{2} + \frac{1}{4}) × 2 ^{− 1} &=&
-                         (\frac{1}{4} + \frac{1}{8})\\ \\&=&
-                                     \frac{3}{8}
-\end{matrix}
+\begin{align*}
+    \frac{1}{2} + \frac{1}{4} + 2^{-1} &= \frac{1}{4} + \frac{1}{8}\\\\ 
+    &= \frac{3}{8}\\ 
+\end{align*}
 $$
+
 Neste caso, o erro absoluto da representação é 0.
 
 Já o número $(0.1)_{10}$ pode ser representado no sistema ponto flutuante $F(2, 5,  − 5, 5)$ como $(0.11001) × 2^{−3}$ que pode ser representado como fração da seguinte maneira:<br>
 
-
 $$
-\begin{matrix}
-(\frac{1}{2} + \frac{1}{4} + \frac{1}{32}) × 2 ^{− 3} &=&
-                         (\frac{1}{16} + \frac{1}{32} + \frac{1}{256})\\ \\&=&
-                                     \frac{25}{256}
-                                    \\
-\end{matrix}
+\begin{align*}
+    \frac{1}{2} + \frac{1}{4} + \frac{1}{32} &= \frac{1}{16} + \frac{1}{32} + \frac{1}{256}\\\\ 
+    &= \frac{25}{256}\\
+\end{align*}
 $$
 
 Note que o erro absoluto dessa representação é:
 
 $$
-\begin{matrix}
-\\
-\frac{1}{10} − \frac{25}{256} &=&
-                         \frac{6}{2560}\\ \\&=&
-                                     \frac{3}{1280}
-\end{matrix}
+\begin{align*}
+    \frac{1}{10} − \frac{25}{256} &=&
+             \frac{6}{2560}\\ \\&=&
+                         \frac{3}{1280}
+\end{align*}
 $$
 
 ### Entrada
