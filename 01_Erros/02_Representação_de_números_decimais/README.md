@@ -37,9 +37,9 @@ O segundo dígito de *x* no [sistema em ponto flutuante](https://moodle2.quix
 Continuando o processo
 
 | x | 2*x | integerPart(x) | FractionalPart(x) |
-| --- | --- | --- | --- |
 | 0.375 | 0.75 | 0 | 0.75 |
 | 0.75 | 1.5 | 1 | 0.5 |
+| --- | --- | --- | --- |
 | 0.5 | 1.0 | 1 | 0.0 |
 
 O terceiro dígito de *x* no [sistema em ponto flutuante](https://moodle2.quixada.ufc.br/mod/vpl/view.php?id=54185) é 1.
