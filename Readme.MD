@@ -25,7 +25,9 @@ Os problemas propostos foram resolvidos utilizando a linguagem de programação 
         <th>Problema</th>
     </tr>
     <tr>
-        <td rowspan="4">Erros</td>
+        <td rowspan="4">
+            <a href="https://github.com/Joaonorr/Matematica-Computacional/tree/main/01_Erros">Erros </a>
+        </td>
         <td>
             <a href="https://github.com/Joaonorr/Matematica-Computacional/tree/main/01_Erros/01_Sistema_em_ponto_flutuante">Sistema em ponto flutuante</a>
         </td>
