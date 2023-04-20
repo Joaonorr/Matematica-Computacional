@@ -17,7 +17,7 @@ def epsilon(error:float):
         if relativeError(e_approach, e_previous) < error: # verifica se o erro relativo é menor que o erro
             break
         n += 1 # atualiza o valor de n
-    return "{:.15}".format(e_approach) # retorna o valor de e com 15 casas decimais
+    return "{:.15f}".format(e_approach) # retorna o valor de e com 15 casas decimais
 
         
 def main():
