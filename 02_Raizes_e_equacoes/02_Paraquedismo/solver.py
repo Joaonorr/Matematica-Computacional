@@ -2,10 +2,15 @@ import math
 
 # Função que trunca um número decimal
 def truncar_numero_decimal(numero, casas_decimais):
+
     string_formatada = '%.12f' % numero
+
     parte_inteira, separador, parte_decimal = string_formatada.partition('.')
+    
     parte_decimal_truncada = (parte_decimal + '0' * casas_decimais)[:casas_decimais]
+
     numero_truncado = '.'.join([parte_inteira, parte_decimal_truncada])
+
     return numero_truncado
 
 # Função que calcula a velocidade do paraquedista
@@ -40,7 +45,7 @@ def main():
 
     MASSA_MINIMA = bissecao(COEF_ARRASTO, VELOCIDADE_MAX, TEMPO, MASSA_1, MASSA_2)
 
-    print(truncar_numero_decimal(MASSA_MINIMA, 2))
+    print(MASSA_MINIMA)
 
 if __name__ == '__main__':
     main()
