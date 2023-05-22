@@ -71,8 +71,8 @@ Para resolver esse problema, vamos utilizar o método da bisseção. Para isso, 
 Note que estamos utilizando valores de $C_{a_{0}}$, $C_{b_{0}}$ e $C_{c_{0}}$ iguais a 42, 28 e 4, respectivamente apenas para facilitar a implementação.
 
 ```python
-def f(x):
-    return (4+x)/((42-2*x)**2*(28-x))
+def concentracao(mols):
+    return (CONC_C_0 + mols) / (((CONC_A_0 - 2*mols)**2) * (CONC_B_0 - mols))
 ```
 
 Agora, vamos definir a função que calcula o valor de $x$ utilizando o método da bisseção.
@@ -80,31 +80,103 @@ Agora, vamos definir a função que calcula o valor de $x$ utilizando o método 
 De forma simplificada, o método da bisseção consiste em dividir o intervalo de busca pela metade e verificar em qual dos dois intervalos a solução se encontra. Esse processo é repetido até que o intervalo de busca seja menor que o erro aceito.
 
 ```python
-def bissecao(a, b, epsilon):
-    if f(a)*f(b) > 0: # Se f(a) e f(b) possuem o mesmo sinal, não há solução
-        return None
-    else:
-        while abs(b-a) > epsilon: # Enquanto o intervalo de busca for maior que o erro aceito
-            x = (a+b)/2
-            if f(x) == 0: # Se f(x) = 0, x é a solução
-                return x
-            elif f(a)*f(x) < 0: # Se f(a) e f(x) possuem sinais diferentes, a solução está no intervalo (a, x)
-                b = x
-            else: # Se f(b) e f(x) possuem sinais diferentes, a solução está no intervalo (x, b)
-                a = x
-        return x 
+def bissecao(CONCENTRACAO, CONC_A_0, CONC_B_0, CONC_C_0, mols_inicial, mols_final, ERRO_ACEITO):
+    # Função que retorna a concentração de C em função do número de mols de C
+    def concentracao(mols):
+        return (CONC_C_0 + mols) / (((CONC_A_0 - 2*mols)**2) * (CONC_B_0 - mols))
+    #
+    while math.fabs(mols_final - mols_inicial)/2 >= 1*10**(-ERRO_ACEITO-1):
+        # Calcula o número de mols do intermediário
+        mols_intermediario = (mols_inicial + mols_final)/2
+        # Verifica se a concentração do intermediário é menor que a concentração desejada
+        if concentracao(mols_intermediario) < CONCENTRACAO:
+
+            mols_inicial = mols_intermediario
+
+        else:
+
+            mols_final = mols_intermediario
+
+    return mols_intermediario
 ```
 
 Agora, vamos ler os valores de entrada e chamar a função `bissecao` com os valores lidos.
 
 ```python
-K, Ca0, Cb0, Cc0, xl, xu, epsilon = map(float, input().split())
+CONCENTRACAO, CONC_A_0, CONC_B_0, CONC_C_0, MOLS_INICIAL, MOLS_FINAL, ERRO_ACEITO = map(float, input().split())
+    
+x = bissecao(CONCENTRACAO, CONC_A_0, CONC_B_0, CONC_C_0, MOLS_INICIAL, MOLS_FINAL, ERRO_ACEITO)
 
-x = bissecao(xl, xu, epsilon)
 ```
 
 Por fim, vamos imprimir o valor de $x$ com 2 casas decimais.
 
 ```python
-print(truncate(x, 2))
+print(truncar_numero_decimal(x, int(ERRO_ACEITO)))
+```
+
+Onde a função `truncar_numero_decimal` é definida como:
+
+```python
+def truncar_numero_decimal(numero, casas_decimais):
+    # Função que retorna o número truncado com a quantidade de casas decimais desejada
+    string_formatada = '%.12f' % numero
+    # Separa a parte inteira da parte decimal
+    parte_inteira, separador, parte_decimal = string_formatada.partition('.')
+    # Trunca a parte decimal
+    parte_decimal_truncada = (parte_decimal + '0' * casas_decimais)[:casas_decimais]
+    # Junta a parte inteira com a parte decimal truncada
+    numero_truncado = '.'.join([parte_inteira, parte_decimal_truncada])
+    # Retorna o número truncado
+    return numero_truncado
+```
+
+O código completo é mostrado abaixo.
+
+```python
+import math
+
+def truncar_numero_decimal(numero, casas_decimais):
+
+    string_formatada = '%.12f' % numero
+
+    parte_inteira, separador, parte_decimal = string_formatada.partition('.')
+    
+    parte_decimal_truncada = (parte_decimal + '0' * casas_decimais)[:casas_decimais]
+
+    numero_truncado = '.'.join([parte_inteira, parte_decimal_truncada])
+    
+    return numero_truncado
+
+
+def bissecao(CONCENTRACAO, CONC_A_0, CONC_B_0, CONC_C_0, mols_inicial, mols_final, ERRO_ACEITO):
+    
+    def concentracao(mols):
+        return (CONC_C_0 + mols) / (((CONC_A_0 - 2*mols)**2) * (CONC_B_0 - mols))
+
+    while math.fabs(mols_final - mols_inicial)/2 >= 1*10**(-ERRO_ACEITO-1):
+
+        mols_intermediario = (mols_inicial + mols_final)/2
+
+        if concentracao(mols_intermediario) < CONCENTRACAO:
+
+            mols_inicial = mols_intermediario
+
+        else:
+
+            mols_final = mols_intermediario
+
+    return mols_intermediario
+
+
+def main():
+    CONCENTRACAO, CONC_A_0, CONC_B_0, CONC_C_0, MOLS_INICIAL, MOLS_FINAL, ERRO_ACEITO = map(float, input().split())
+    
+    x = bissecao(CONCENTRACAO, CONC_A_0, CONC_B_0, CONC_C_0, MOLS_INICIAL, MOLS_FINAL, ERRO_ACEITO)
+
+    print(truncar_numero_decimal(x, int(ERRO_ACEITO)))
+
+
+if __name__ == '__main__':
+    main()
 ```

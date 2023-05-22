@@ -14,7 +14,7 @@ def truncar_numero_decimal(numero, casas_decimais):
 
 
 def bissecao(CONCENTRACAO, CONC_A_0, CONC_B_0, CONC_C_0, mols_inicial, mols_final, ERRO_ACEITO):
-
+    
     def concentracao(mols):
         return (CONC_C_0 + mols) / (((CONC_A_0 - 2*mols)**2) * (CONC_B_0 - mols))
 
