@@ -47,6 +47,25 @@ Os problemas propostos foram resolvidos utilizando a linguagem de programação 
             <a href="https://github.com/Joaonorr/Matematica-Computacional/tree/main/01_Erros/04_N%C3%BAmero_e">Número e</a>
         </td>
     </tr>
+    <!-- Raizes e equações  -->
+    <tr>
+        <td rowspan="3">
+            <a href="https://github.com/Joaonorr/Matematica-Computacional/tree/main/02_Raizes_e_equacoes">Raizes e Equações </a>
+        </td>
+        <td>
+            <a href="https://github.com/Joaonorr/Matematica-Computacional/tree/main/02_Raizes_e_equacoes/01_Reacoes_quimicas_reversiveis">Reações Químicas Reversíveis</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="https://github.com/Joaonorr/Matematica-Computacional/tree/main/02_Raizes_e_equacoes/02_Paraquedismo">Paraquedismo</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="https://github.com/Joaonorr/Matematica-Computacional/tree/main/02_Raizes_e_equacoes/03_Busca_tern%C3%A1ria">Busca Ternária</a>
+        </td>
+    </tr>
 </table>
 
 
