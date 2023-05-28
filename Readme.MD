@@ -5,7 +5,8 @@ A disciplina tem como objetivo abordar os seguintes tópicos:
 - Noções de modelagem matemática de problemas.
 - Noções de métodos numéricos: 
     - erros de representação em ponto flutuante e perda de significância; 
-    - raízes de equações; integração numérica; 
+    - raízes de equações; 
+    - integração numérica; 
     - interpolação; solução de sistemas de equações lineares; 
     - minimização de funções. 
 - Programação linear: 
@@ -66,6 +67,14 @@ Os problemas propostos foram resolvidos utilizando a linguagem de programação 
             <a href="https://github.com/Joaonorr/Matematica-Computacional/tree/main/02_Raizes_e_equacoes/03_Busca_tern%C3%A1ria">Busca Ternária</a>
         </td>
     </tr>
+    <!-- Interpolação -->
+    <tr>
+        <td rowspan="3">
+            <a href="https://github.com/Joaonorr/Matematica-Computacional/tree/main/03_Interpola%C3%A7%C3%A3o">Interpolação </a>
+        </td>
+        <td>
+            <a href="https://github.com/Joaonorr/Matematica-Computacional/tree/main/03_Interpola%C3%A7%C3%A3o/01_Dieta_do_gabriel">Dieta do Gabriel</a>
+        </td>
 </table>
 
 
