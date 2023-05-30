@@ -75,6 +75,12 @@ Os problemas propostos foram resolvidos utilizando a linguagem de programação 
         <td>
             <a href="https://github.com/Joaonorr/Matematica-Computacional/tree/main/03_Interpola%C3%A7%C3%A3o/01_Dieta_do_gabriel">Dieta do Gabriel</a>
         </td>
+    </tr>
+    <tr>
+        <td>
+            <a href="https://github.com/Joaonorr/Matematica-Computacional/tree/main/03_Interpola%C3%A7%C3%A3o/02_Brincadeira_do_Augusto">Brincadeira do Augusto</a>
+        </td>
+    </tr>
 </table>
 
 
