@@ -20,7 +20,7 @@ Os problemas propostos foram resolvidos utilizando a linguagem de programação 
 
 ## Problemas
 
-<table>
+<table align="center">
     <tr>
         <th>Tópico</th>
         <th>Problema</th>
@@ -84,6 +84,15 @@ Os problemas propostos foram resolvidos utilizando a linguagem de programação 
     <tr>
         <td>
         <a href="https://github.com/Joaonorr/Matematica-Computacional/tree/main/03_Interpola%C3%A7%C3%A3o/03_Soma_MOP">Soma MOP</a>
+        </td>
+    </tr>
+    <!-- Integração -->
+    <tr>
+        <td rowspan="2">
+            <a href="https://github.com/Joaonorr/Matematica-Computacional/tree/main/04_Integra%C3%A7%C3%A3o">Integração </a>
+        </td>
+        <td>
+            <a href="https://github.com/Joaonorr/Matematica-Computacional/tree/main/04_Integra%C3%A7%C3%A3o/01_M%C3%A9todo_de_simpson">Método de Simpson 1/3</a>
         </td>
     </tr>
 </table>
