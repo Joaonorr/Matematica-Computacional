@@ -100,6 +100,15 @@ Os problemas propostos foram resolvidos utilizando a linguagem de programação 
             <a href="https://github.com/Joaonorr/Matematica-Computacional/tree/main/04_Integra%C3%A7%C3%A3o/02_Comprimento_de_um_arco">Comprimento de um arco</a>
         </td>
     </tr>
+    <!-- PL -->
+    <tr>
+        <td>
+            <a href="https://github.com/Joaonorr/Matematica-Computacional/tree/main/05_Modelagem_PL">Modelagem PL </a>
+        </td>
+        <td>
+            <a href="https://github.com/Joaonorr/Matematica-Computacional/tree/main/05_Modelagem_PL/01_Caminho_M%C3%ADnimo>">Caminho Mínimo</a>
+        </td>
+    </tr>
 </table>
 
 
